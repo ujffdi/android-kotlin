@@ -1,18 +1,21 @@
 apply plugin: 'com.android.library'
 
+apply plugin: 'kotlin-android'
+
+apply plugin: 'kotlin-android-extensions'
+
+apply plugin: 'kotlin-kapt'
+
 android {
-    compileSdkVersion 28
-
-
+    compileSdkVersion rootProject.ext.android.compileSdkVersion
 
     defaultConfig {
-        minSdkVersion 15
-        targetSdkVersion 28
+        minSdkVersion rootProject.ext.android.minSdkVersion
+        targetSdkVersion rootProject.ext.android.targetSdkVersion
         versionCode 1
         versionName "1.0"
 
-        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
-
+        multiDexEnabled true
     }
 
     buildTypes {
@@ -22,13 +25,48 @@ android {
         }
     }
 
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
 }
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
 
-    implementation 'com.android.support:appcompat-v7:28.0.0'
     testImplementation 'junit:junit:4.12'
-    androidTestImplementation 'com.android.support.test:runner:1.0.2'
-    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+    api rootProject.ext.androidSupport.appcompat
+    api rootProject.ext.androidSupport.annotations
+    api rootProject.ext.androidSupport.design
+    api rootProject.ext.network.retrofit
+    api rootProject.ext.network.adapterRxjava2
+    api rootProject.ext.network.loggerInterceptor
+    api rootProject.ext.lifecycle.extensions
+    api rootProject.ext.lifecycle.room
+    api rootProject.ext.lifecycle.roomRxjava
+    api rootProject.ext.rx.rxJava
+    api rootProject.ext.rx.rxAndroid
+    api rootProject.ext.rx.rxLifecycle2
+    api rootProject.ext.ui.constraint
+    api rootProject.ext.ui.recycler
+    api rootProject.ext.ui.glide
+    api rootProject.ext.ui.glideTransform
+    api rootProject.ext.ui.photoView
+    api rootProject.ext.ui.superTextView
+    api rootProject.ext.ui.materialedit
+    api rootProject.ext.ui.flycoTab
+    api rootProject.ext.ui.matisse
+    api rootProject.ext.other.fragmentation
+    api rootProject.ext.other.eventbus
+    api rootProject.ext.other.fastjson
+    api rootProject.ext.other.utilcode
+    api rootProject.ext.other.luban
+    api rootProject.ext.di.dagger2
+    api rootProject.ext.di.dagger2Support
+    api rootProject.ext.router.router
+    annotationProcessor rootProject.ext.apts.glide
+    annotationProcessor rootProject.ext.apts.dagger2processor
+    annotationProcessor rootProject.ext.apts.dagger2Compiler
+    implementation"org.jetbrains.kotlin:kotlin-stdlib-jre7:$rootProject.ext.kotlinVersion"
 }
