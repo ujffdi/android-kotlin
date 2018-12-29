@@ -34,14 +34,14 @@ android {
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
-
+    implementation"org.jetbrains.kotlin:kotlin-stdlib-jre7:$rootProject.ext.kotlinVersion"
     testImplementation 'junit:junit:4.12'
     api rootProject.ext.androidSupport.appcompat
     api rootProject.ext.androidSupport.annotations
     api rootProject.ext.androidSupport.design
     api rootProject.ext.network.retrofit
     api rootProject.ext.network.adapterRxjava2
-    api rootProject.ext.network.loggerInterceptor
+    api rootProject.ext.network. loggerInterceptor
     api rootProject.ext.lifecycle.extensions
     api rootProject.ext.lifecycle.room
     api rootProject.ext.lifecycle.roomRxjava
@@ -65,8 +65,9 @@ dependencies {
     api rootProject.ext.di.dagger2
     api rootProject.ext.di.dagger2Support
     api rootProject.ext.router.router
-    annotationProcessor rootProject.ext.apts.glide
-    annotationProcessor rootProject.ext.apts.dagger2processor
-    annotationProcessor rootProject.ext.apts.dagger2Compiler
-    implementation"org.jetbrains.kotlin:kotlin-stdlib-jre7:$rootProject.ext.kotlinVersion"
+    api rootProject.ext.test.runner
+    api rootProject.ext.test.espresso
+    kapt rootProject.ext.apts.glide
+    kapt rootProject.ext.apts.dagger2processor
+    kapt rootProject.ext.apts.dagger2Compiler
 }
