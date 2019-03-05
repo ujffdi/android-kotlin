@@ -1,6 +1,7 @@
-package com.tongsr.kotlindemo.base.activity
+package com.jwsr.baselib.base.activity
 
 import android.support.v4.app.Fragment
+import com.jwsr.baselib.base.activity.SimpleActivity
 import dagger.android.AndroidInjector
 import dagger.android.DispatchingAndroidInjector
 import dagger.android.support.HasSupportFragmentInjector

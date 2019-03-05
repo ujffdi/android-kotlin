@@ -1,4 +1,4 @@
-package com.tongsr.kotlindemo.widget
+package com.jwsr.baselib.widget
 
 import android.content.Context
 import android.support.v7.widget.GridLayoutManager

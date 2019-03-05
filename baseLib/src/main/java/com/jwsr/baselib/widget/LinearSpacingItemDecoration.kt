@@ -1,4 +1,4 @@
-package com.tongsr.kotlindemo.widget
+package com.jwsr.baselib.widget
 
 import android.graphics.Rect
 import android.support.v7.widget.RecyclerView

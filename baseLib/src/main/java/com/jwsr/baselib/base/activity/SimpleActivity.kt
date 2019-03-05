@@ -1,10 +1,9 @@
-package com.tongsr.kotlindemo.base.activity
+package com.jwsr.baselib.base.activity
 
 import android.app.Activity
 import android.os.Bundle
 import com.blankj.utilcode.util.ScreenUtils
-import com.jwsr.baselib.base.activity.SupportActivity
-import com.tongsr.kotlindemo.base.api.IBaseView
+import com.jwsr.baselib.base.api.IBaseView
 
 /**
  * <pre>
