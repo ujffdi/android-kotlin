@@ -8,7 +8,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.jwsr.baselib.R
-import com.tongsr.kotlindemo.base.api.IBaseView
+import com.jwsr.baselib.base.api.IBaseView
 import com.trello.rxlifecycle2.components.support.RxAppCompatDialogFragment
 
 /**
